@@ -18,9 +18,9 @@ fn main() {
     {
         const N: i32 = 6;
 
-        const IS_DIVISIBLE_2: bool = N % 2 != 0;
-        const IS_DIVISIBLE_3: bool = N % 3 != 0;
-        const IS_DIVISIBLE_4: bool = N % 4 != 0;
+        const IS_DIVISIBLE_2: bool = N % 2 == 0;
+        const IS_DIVISIBLE_3: bool = N % 3 == 0;
+        const IS_DIVISIBLE_4: bool = N % 4 == 0;
 
         if !IS_DIVISIBLE_4 && !IS_DIVISIBLE_3  && !IS_DIVISIBLE_2  {
             println!("number is not divisible by 4, 3, or 2");

@@ -18,23 +18,23 @@ fn main() {
     {
         const N: i32 = 6;
 
-        const IS_NOT_DIVISIBLE_2: bool = N % 2 != 0;
-        const IS_NOT_DIVISIBLE_3: bool = N % 3 != 0;
-        const IS_NOT_DIVISIBLE_4: bool = N % 4 != 0;
+        const IS_DIVISIBLE_2: bool = N % 2 != 0;
+        const IS_DIVISIBLE_3: bool = N % 3 != 0;
+        const IS_DIVISIBLE_4: bool = N % 4 != 0;
 
-        if IS_NOT_DIVISIBLE_4 && IS_NOT_DIVISIBLE_3  && IS_NOT_DIVISIBLE_2  {
+        if !IS_DIVISIBLE_4 && !IS_DIVISIBLE_3  && !IS_DIVISIBLE_2  {
             println!("number is not divisible by 4, 3, or 2");
             // 本来はエラーをスローさせたほうが良い
             return;
         }
 
-        if !IS_NOT_DIVISIBLE_4 {
+        if IS_DIVISIBLE_4 {
             // 数値は4で割り切れます
             println!("number is divisible by 4");
-        } else if !IS_NOT_DIVISIBLE_3 {
+        } else if IS_DIVISIBLE_3 {
             // 数値は3で割り切れます
             println!("number is divisible by 3");
-        } else if !IS_NOT_DIVISIBLE_2 {
+        } else if IS_DIVISIBLE_2 {
             // 数値は2で割り切れます
             println!("number is divisible by 2");
         }

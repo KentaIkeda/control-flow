@@ -39,8 +39,26 @@ fn main() {
             println!("number is divisible by 2");
         }
     }
+
+    {
+        // Rustに置いてifは式として扱う
+        let condition = true;
+        // JavaScriptの参考演算子の様な振る舞いができる
+        // ifアームとelseアームで返される値の型は同じにする必要がある
+        let number = if condition { 5 } else { 6 };
+        println!("number is: {}", number);
+    }
 }
 
 fn is_divisible_n_by_x(n: i32, x: i32) -> bool {
     n % x == 0
+}
+
+// returnを使用していないが、値が返される
+fn _sample(a: i32, b: i32, boo: bool) -> i32 {
+    if boo {
+        a
+    } else {
+        b
+    }
 }
